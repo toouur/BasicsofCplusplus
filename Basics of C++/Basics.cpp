@@ -3,7 +3,7 @@
 int main()			//C++ programs start by executing the function main
 {
 
-	cout << "Hello, Beagle\n";		// output "Hello, Beagle!"
+	/*cout << "Hello, Beagle\n";		// output "Hello, Beagle!"
 									// return 0;
 
 	cout << "Please enter your first name (followed by 'enter'):\n";
@@ -24,4 +24,12 @@ int main()			//C++ programs start by executing the function main
 	cin >> age; // read an integer
 	month_age = age * 12;
 	cout << "Hello, " << first_name1 << " " << last_name1 << " (age " << age << " " << month_age << ")\n";
+*/
+	string previous = " "; // previous word; initialized to “not a word”
+	string current; // current word
+	while (cin >> current) { // read a stream of words
+		if (previous == current) // check if the word is the same as last
+			cout << "repeated word: " << current << '\n';
+		previous = current;
+	}
 }
